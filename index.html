@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentn grading</title>
+</head>
+<body>
+    <h1>This button used for student grading marks</h1>
+    <button onclick="grad()">clik here</button>
+    <h2 id="output"></h2>
+
+    <script>
+        var show=document.getElementById("output")
+        function grad(){
+            var array=[{name: 'ali',  number:34},{name: 'usama', number:99},
+                      {name: 'mujtba', number:95},{name: 'awais', number:86},
+                      {name: 'haseeb', number:67},{name:'farhan',number:100},
+                      {name:'zubair', number:56},{name:'shrafat', number:34},
+                      {name:'faraz', number:45},{name:'fayaz', number:27}]
+            for(let i=0; i<array.length; i++)
+            if(array[i].number>=90 && array[i].number<=100){
+           show.innerHTML+=`${array[i].name} - number : ${array[i].number}, Grade: A+ <br>`
+            }
+            else if(array[i].number>=80 && array[i].number<=89){
+                show.innerHTML+=`${array[i].name} - number : ${array[i].number}, Grade A <br>`
+            }
+            else if(array[i].number>=70 && array[i].number<=79){
+                show.innerHTML+=`${array[i].name} - number: ${array[i].number}, Grade B <br>`
+            }
+            else if(array[i].number>=60 && array[i].number<=69){
+                show.innerHTML+=`${array[i].name} - namber: ${array[i].number}, Grade C <br>`
+            }
+            else if(array[i].number>=40 && array[i].number<=59){
+                show.innerHTML+=`${array[i].name} - number: ${array[i].number}, Grade D <br>`
+            }
+            else{show.innerHTML+=`${array[i].name} - number: ${array[i].number}, Fail <br>`}
+        }
+    </script>
+    
+</body>
+</html>
